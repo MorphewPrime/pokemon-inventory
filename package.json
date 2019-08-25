@@ -2,6 +2,10 @@
   "name": "pokeinventory",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.16.2",
+    "npm": "6.9.0"
+  },
   "dependencies": {
     "@vtex/react-csv-parse": "^3.0.2",
     "axios": "^0.19.0",
