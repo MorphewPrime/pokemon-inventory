@@ -37,6 +37,7 @@ class App extends React.Component {
     fetch("https://pokemon-go1.p.rapidapi.com/pokemon_types.json", {
       "method": "GET",
       "headers": {
+        "Referer": "https://pokemon-inventory.xxx.com/",
         "x-rapidapi-host": "pokemon-go1.p.rapidapi.com",
         "x-rapidapi-key": "d34e436671mshd56de8a04738958p10d3f4jsnc66a56df49fb"
       }
@@ -126,6 +127,7 @@ class App extends React.Component {
   handleSearch = (e) => {
     // if (!e.target.value || e.target.value === '') return;
     // let searchData = [];
+    console.log(e)
     let searchData = this.state.origData.filter(poke => Object.values(poke).findIndex(val => val.toLowerCase().includes(e.target.value.toLowerCase())) > -1);
     if (!Array.isArray(searchData) || !searchData.length) searchData = this.state.origData;
     console.log(searchData);
@@ -176,9 +178,27 @@ class App extends React.Component {
         });
     } 
     });
-    this.setState({ data });
+    this.setState({ 
+      data: data,
+      origData: data
+    });
   }
 
+  flipData = (e) => {
+    this.setState({data: this.state.data.reverse()});
+  }
+
+  saveOrigData = (e) => {
+    localStorage.setItem("origData", JSON.stringify(this.state.origData));
+  }
+
+  loadSavedData = (e) => {
+    let data = JSON.parse(localStorage.getItem('origData'));
+    this.setState({
+      data: data,
+      origData: data
+    });
+  }
   
   render() {
     const keys = [
@@ -238,7 +258,8 @@ class App extends React.Component {
                 />
               }
             </div>
-            Loaded {this.state.data.length} pokemon
+            <button onClick={this.saveOrigData}>SAVE</button> <button onClick={this.loadSavedData}>LOAD</button>
+            <div>Loaded {this.state.data.length} pokemon</div>
             <hr style={{marginBottom: 0}}/>
           </div>
           {/* add loading status       */}
@@ -250,7 +271,7 @@ class App extends React.Component {
               </label>
               <label>
                 Filter by: 
-                <select name="attributes" disabled={this.state.data && this.state.origData.length <= 0} onChange={this.handleFilter}>
+                <select name="attributes" disabled={this.state.data && this.state.data.length <= 0} onChange={this.handleFilter}>
                   <option />
                   <option value="cp">CP</option>
                   <option value="level">Level</option>
@@ -259,8 +280,12 @@ class App extends React.Component {
                   <option value="name">Name</option>
                   <option value="gen">Generation</option>
                   <option value="candy">Candy</option>
+                  <option value="atk">Attack</option>
+                  <option value="def">Defence</option>
+                  <option value="sta">Stamina</option>
                 </select>
               </label>
+              <button onClick={this.flipData}>Flip Order</button>
               <label>
                 Shinys Only 
                 <input type="checkbox" name="shiny" disabled={this.state.data && this.state.data.length <= 0} onChange={this.toggleShinyView} />
