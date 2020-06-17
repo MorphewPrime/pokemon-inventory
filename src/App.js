@@ -55,6 +55,8 @@ class App extends React.Component {
     fetch("https://pokemon-go1.p.rapidapi.com/fast_moves.json", {
       "method": "GET",
       "headers": {
+        "Access-Control-Allow-Origin-host": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
         "x-rapidapi-host": "pokemon-go1.p.rapidapi.com",
         "x-rapidapi-key": "d34e436671mshd56de8a04738958p10d3f4jsnc66a56df49fb"
       }
@@ -71,6 +73,8 @@ class App extends React.Component {
     fetch("https://pokemon-go1.p.rapidapi.com/charged_moves.json", {
       "method": "GET",
       "headers": {
+        "Access-Control-Allow-Origin-host": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
         "x-rapidapi-host": "pokemon-go1.p.rapidapi.com",
         "x-rapidapi-key": "d34e436671mshd56de8a04738958p10d3f4jsnc66a56df49fb"
       }
