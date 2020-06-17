@@ -26,7 +26,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://pokemon-go1.p.rapidapi.com",
   "eslintConfig": {
     "extends": "react-app"
   },
