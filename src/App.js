@@ -34,7 +34,23 @@ class App extends React.Component {
 
 
   getPokemonTypes = () => {
-    fetch("https://pokemon-go1.p.rapidapi.com/pokemon_types.json", {
+    // fetch("https://pokemon-go1.p.rapidapi.com/pokemon_types.json", {
+    //   "method": "GET",
+    //   "headers": {
+    //     "Referer": "https://pokemon-inventory.xxx.com/",
+    //     "x-rapidapi-host": "pokemon-go1.p.rapidapi.com",
+    //     "x-rapidapi-key": "d34e436671mshd56de8a04738958p10d3f4jsnc66a56df49fb"
+    //   }
+    // })
+    // .then(response => response.json().then(data => {
+    //   console.log(data)
+    //   this.setState({ pokemonTypes: data })
+    // }))
+    // .catch(err => {
+    //   console.log(err);
+    // });
+
+    fetch("/pokemon_types.json", {
       "method": "GET",
       "headers": {
         "Referer": "https://pokemon-inventory.xxx.com/",
@@ -52,7 +68,23 @@ class App extends React.Component {
   }
 
   getFastMoves = () => {
-    fetch("https://pokemon-go1.p.rapidapi.com/fast_moves.json", {
+    // fetch("https://pokemon-go1.p.rapidapi.com/fast_moves.json", {
+    //   "method": "GET",
+    //   "headers": {
+    //     "Access-Control-Allow-Origin-host": "*",
+    //     "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+    //     "x-rapidapi-host": "pokemon-go1.p.rapidapi.com",
+    //     "x-rapidapi-key": "d34e436671mshd56de8a04738958p10d3f4jsnc66a56df49fb"
+    //   }
+    // })
+    // .then(response => response.json().then(fastMoves => {
+    //   this.setState({ fastMoves: fastMoves })
+    // }))
+    // .catch(err => {
+    //   console.log(err);
+    // });
+
+    fetch('/fast_moves.json', {
       "method": "GET",
       "headers": {
         "Access-Control-Allow-Origin-host": "*",
@@ -70,7 +102,23 @@ class App extends React.Component {
   }
 
   getChargedMoves = () => {
-    fetch("https://pokemon-go1.p.rapidapi.com/charged_moves.json", {
+    // fetch("https://pokemon-go1.p.rapidapi.com/charged_moves.json", {
+    //   "method": "GET",
+    //   "headers": {
+    //     "Access-Control-Allow-Origin-host": "*",
+    //     "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+    //     "x-rapidapi-host": "pokemon-go1.p.rapidapi.com",
+    //     "x-rapidapi-key": "d34e436671mshd56de8a04738958p10d3f4jsnc66a56df49fb"
+    //   }
+    // })
+    // .then(response => response.json().then(data => {
+    //   this.setState({ chargedMoves: data })
+    // }))
+    // .catch(err => {
+    //   console.log(err);
+    // });
+
+    fetch("/charged_moves.json", {
       "method": "GET",
       "headers": {
         "Access-Control-Allow-Origin-host": "*",
