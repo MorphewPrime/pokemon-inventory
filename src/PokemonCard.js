@@ -19,6 +19,8 @@ class PokemonCard extends React.Component {
     const { attributes, fastMove, chargedMove } = this.props;
     // const shiny = attributes.shiny === 'YES' ? '-shiny' : '';
     // const shiny = attributes.shiny === 'YES' ? '_shiny' : '';
+    // const shiny = attributes.shiny === 'YES' ? '_shiny' : '';
+
     const shiny = attributes.shiny === 'YES' ? 'shiny' : '';
 
 
