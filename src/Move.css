@@ -1,0 +1,118 @@
+.Normal {
+  background-color: rgb(168, 168, 120);
+  border: 1px solid rgb(97, 97, 72);
+  box-shadow: inset -2px -2px 2px 0px rgb(97, 97, 72);
+}
+
+.Fighting {
+  background-color: rgb(192, 32, 56);
+  border: 1px solid rgb(88, 15, 26);
+  box-shadow: inset -2px -2px 2px 0px rgb(88, 15, 26);
+}
+
+.Flying {
+  background-color: rgb(168, 144, 240);
+  border: 1px solid rgb(110, 94, 155);
+  box-shadow: inset -2px -2px 2px 0px rgb(110, 94, 155);
+}
+
+.Poison {
+  background-color: rgb(160, 64, 160);
+  border: 1px solid rgb(100, 40, 100);
+  box-shadow: inset -2px -2px 2px 0px rgb(100, 40, 100);
+}
+
+.Ground {
+  background-color: rgb(224, 192, 104);
+  border: 1px solid rgb(160, 137, 75);
+  box-shadow: inset -2px -2px 2px 0px rgb(160, 137, 75);
+}
+
+.Rock {
+  background-color: rgb(184, 160, 56);
+  border: 1px solid rgb(114, 100, 35);
+  box-shadow: inset -2px -2px 2px 0px rgb(114, 100, 35);
+}
+
+.Bug {
+  background-color: rgb(168, 184, 32);
+  border: 1px solid rgb(111, 121, 21);
+  box-shadow: inset -2px -2px 2px 0px rgb(111, 121, 21);
+}
+
+.Ghost {
+  background-color: rgb(112, 88, 152);
+  border: 1px solid rgb(65, 51, 87);
+  box-shadow: inset -2px -2px 2px 0px rgb(65, 51, 87);
+}
+
+.Steel {
+  background-color: rgb(184, 184, 208);
+  border: 1px solid rgb(132, 132, 148);
+  box-shadow: inset -2px -2px 2px 0px rgb(132, 132, 148);
+}
+
+.Fire {
+  background-color: rgb(240, 128, 48);
+  border: 1px solid rgb(168, 90, 35);
+  box-shadow: inset -2px -2px 2px 0px rgb(168, 90, 35);
+}
+
+.Water {
+  background-color: rgb(104, 144, 240);
+  border: 1px solid rgb(73, 101, 167);
+  box-shadow: inset -2px -2px 2px 0px rgb(73, 101, 167);
+}
+
+.Grass {
+  background-color: rgb(120, 200, 80);
+  border: 1px solid rgb(77, 128, 52);
+  box-shadow: inset -2px -2px 2px 0px rgb(77, 128, 52);
+}
+
+.Electric {
+  background-color: rgb(248, 208, 48);
+  border: 1px solid rgb(175, 147, 35);
+  box-shadow: inset -2px -2px 2px 0px rgb(175, 147, 35);
+}
+
+.Psychic {
+  background-color: rgb(248, 88, 136);
+  border: 1px solid rgb(175, 64, 97);
+  box-shadow: inset -2px -2px 2px 0px rgb(175, 64, 97);
+}
+
+.Ice {
+  background-color: rgb(152, 216, 216);
+  border: 1px solid rgb(105, 148, 148);
+  box-shadow: inset -2px -2px 2px 0px rgb(105, 148, 148);
+}
+
+.Dragon {
+  background-color: rgb(112, 56, 248);
+  border: 1px solid rgb(81, 41, 175);
+  box-shadow: inset -2px -2px 2px 0px rgb(81, 41, 175);
+}
+
+.Dark {
+  background-color: rgb(112, 88, 72);
+  border: 1px solid rgb(53, 42, 35);
+  box-shadow: inset -2px -2px 2px 0px rgb(53, 42, 35);
+}
+
+.Fairy {
+  background-color: rgb(238, 153, 172);
+  border: 1px solid rgb(156, 102, 114);
+  box-shadow: inset -2px -2px 2px 0px rgb(156, 102, 114);
+}
+
+.Unknown {
+  background-color: black;
+  
+}
+
+.move-con {
+  border-radius: 6px;
+  /* box-shadow: inset -3px -1px 2px 0px #a5a5a5;
+  border: 1px solid #d4d4d4; */
+}
